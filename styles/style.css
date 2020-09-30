@@ -16,7 +16,7 @@ main{
 
 column {
     display: grid;
-    grid-template-rows: 300px 100px 100px 300px;
+    grid-template-rows: 300px 100px 100px 300px 50px;
     justify-content: center;
     align-items: center;
     border: 1px solid red;
@@ -53,4 +53,16 @@ label{
 
 input {
     display: none;
+}
+
+label:active {
+    transform: scale(1.1);
+}
+
+label:hover{
+    transform: scale(1.05);
+}
+
+button {
+    width: 100%;
 }
