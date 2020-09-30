@@ -19,20 +19,17 @@ column {
     grid-template-rows: 300px 100px 100px 300px 50px;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
 }
 
 row {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border: 1px solid green;
 }
 
 .score-module {
     width: 33%;
    height: 200px;
-    border: 1px dotted blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,14 +45,15 @@ label{
     width: 33%;
     display: flex;
     justify-content: center;
+    opacity: 90;
+}
+
+img {
+    transform: scale(.9);
 }
 
 input {
     display: none;
-}
-
-label:active {
-    transform: scale(1.1);
 }
 
 label:hover{
@@ -64,4 +62,10 @@ label:hover{
 
 button {
     width: 100%;
+}
+
+input[type="radio"]:checked + img {
+    transform: scale(1.1);
+    opacity: 100;
+    border: 1px solid black;
 }

@@ -8,7 +8,6 @@ export function didUserWin (userThrow, computerThrow){
     }
 
     if ((rps.indexOf(userThrow) === (rps.indexOf(computerThrow)+1) %3)) {
-        console.log((rps.indexOf(computerThrow)+1) %3);
         return 'win';
     }
     else {
