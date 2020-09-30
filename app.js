@@ -9,7 +9,7 @@ const resultDisplay = document.getElementById('result-display');
 const winDisplay = document.getElementById('wins');
 const lossDisplay = document.getElementById('losses');
 const drawDisplay = document.getElementById('draws');
-const infoDisplay = document.getElementById('info-display')
+// const infoDisplay = document.getElementById('info-display')
 const playButton = document.getElementById('play-button');
 // initialize state
 // establishing state
@@ -26,12 +26,12 @@ updateCounters(score);
 playButton.addEventListener('click', () => {
     userThrow = document.querySelector(':checked').value;
     computerThrow = getRandomThrow();
-    displayComputerMove(computerThrow);
+    displayComputerThrow(computerThrow);
     let result = didUserWin(userThrow, computerThrow);
     gameEnd(result, score);
 })
 
-function displayComputerMove(computerThrow){
+function displayComputerThrow(computerThrow){
     if (computerThrow === 'rock'){
         computerImage.src = './assets/rock.jpeg';
     } else if (computerThrow === 'paper') {
@@ -43,7 +43,7 @@ function displayComputerMove(computerThrow){
 
 function gameEnd (result, score) {
     console.log(result);
-    infoDisplay.textContent = `User: ${userThrow} vs Computer: ${computerThrow}!`
+    // infoDisplay.textContent = `User: ${userThrow} vs Computer: ${computerThrow}!`
    if (result === 'win'){
        resultDisplay.textContent = 'YOU WIN!';
        score.win = score.win + 1;
