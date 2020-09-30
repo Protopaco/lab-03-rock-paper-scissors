@@ -4,6 +4,7 @@ import { didUserWin } from './check-results.js';
 
 // grabbing HTML elements
 const computerDisplay = document.getElementById('computer-display');
+const computerImage = document.getElementById('computer-image');
 const resultDisplay = document.getElementById('result-display');
 const winDisplay = document.getElementById('wins');
 const lossDisplay = document.getElementById('losses');
@@ -25,9 +26,20 @@ updateCounters(score);
 playButton.addEventListener('click', () => {
     userThrow = document.querySelector(':checked').value;
     computerThrow = getRandomThrow();
+    displayComputerMove(computerThrow);
     let result = didUserWin(userThrow, computerThrow);
     gameEnd(result, score);
 })
+
+function displayComputerMove(computerThrow){
+    if (computerThrow === 'rock'){
+        computerImage.src = './assets/rock.jpeg';
+    } else if (computerThrow === 'paper') {
+        computerImage.src = './assets/paper.png';
+    } else {
+        computerImage.src = './assets/scissors.jpeg';
+    }
+}
 
 function gameEnd (result, score) {
     console.log(result);
