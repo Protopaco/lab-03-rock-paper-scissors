@@ -1,5 +1,6 @@
 // import functions and grab DOM elements
 import { getRandomThrow } from './get-random-throw.js';
+import { didUserWin } from './check-results.js';
 
 // grabbing HTML elements
 const computerDisplay = document.getElementById('computer-display');
@@ -17,9 +18,11 @@ let computerThrow = '';
 let userThrow = '';
 
 playButton.addEventListener('click', () => {
-    console.log(document.querySelector(':checked'));
+    userThrow = document.querySelector(':checked').value;
     computerThrow = getRandomThrow();
-    console.log(computerThrow);
+    let result = didUserWin(userThrow, computerThrow);
+    
+
 })
 
 

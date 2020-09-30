@@ -46,7 +46,6 @@ row {
 label{
     height: 200px;
     width: 33%;
-    background-color: yellow;
     display: flex;
     justify-content: center;
 }
