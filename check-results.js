@@ -10,6 +10,7 @@ export function didUserWin (player, computer){
     if ((rps.indexOf(player) === (rps.indexOf(computer)+1) %3)) {
         return 'win';
     }
+    
     else {
         return 'lose';
     }
