@@ -9,8 +9,13 @@ body{
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
-    background-color:#BFC0C0;
-    color: white;
+    color: orange;
+    background-image: url("../assets/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+
 }
 
 main{
@@ -39,13 +44,13 @@ row {
     justify-content: center;
     align-items: center;
     border-radius: 25%;
-    background-color: #4F5D75;
+    background-color: #7D4600;
     color: #BFC0C0;
 }
 
 .display-module {
     width: 700px;
-    color: #4F5D75;
+    color: white;
 
 }
 
@@ -58,15 +63,12 @@ input {
     display: none;
 }
 
-label:hover{
-}
-
 button {
-    width: 100%;
+    width: 75%;
     margin: 0;
-    background-color: #4F5D75;
+    background-color: #7D4600;
     color: white;
-    border-radius: 10%;
+    border-radius: 0%;
     outline: none;
 }
 
@@ -84,7 +86,7 @@ input[type="radio"]:checked + span {
 }
 
 .user-options {
-    background-color: #4F5D75;
+    background-color: #7D4600;
     padding: 20px;
     height: 50%;
     width: 100%;
@@ -101,7 +103,7 @@ input[type="radio"]:checked + span {
 
 }
 .computer-options {
-    background-color: #4F5D75;
+    background-color: #7D4600;
     padding: 20px;
     height: 50%;
     width: 100%;
@@ -149,3 +151,4 @@ h3 {
     padding: 0;
     color: #4F5D75;
 }
+
