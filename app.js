@@ -10,6 +10,7 @@ const winDisplay = document.getElementById('wins');
 const lossDisplay = document.getElementById('losses');
 const drawDisplay = document.getElementById('draws');
 const playButton = document.getElementById('play-button');
+const computerOptions = document.getElementsByClassName('computer-options');
 // initialize state
 
 const score = {win: 0, loss: 0, draw: 0, reset: 0}
@@ -28,12 +29,22 @@ playButton.addEventListener('click', () => {
 
 function displayComputerThrow(computerThrow){
     if (computerThrow === 'rock'){
-        computerImage.src = './assets/rock.jpeg';
+        toggleComputerCard(0);
+        setTimeout(toggleComputerCard, 1000, 0);
+
     } else if (computerThrow === 'paper') {
-        computerImage.src = './assets/paper.png';
+        toggleComputerCard(1);
+        setTimeout(toggleComputerCard, 1000, 1);
+
     } else {
-        computerImage.src = './assets/scissors.jpeg';
+        toggleComputerCard(2);
+        setTimeout(toggleComputerCard, 1000, 2);
+
     }
+}
+
+function toggleComputerCard(index){
+    computerOptions[index].classList.toggle('play-card');
 }
 
 function gameEnd (result, score) {
@@ -48,13 +59,18 @@ function gameEnd (result, score) {
         resultDisplay.textContent = 'DRAW!';
         score.draw++;
     }
+    setTimeout(resetResultDisplay, 1000);
     updateCounters(score);
 }
 
+function resetResultDisplay(){
+    resultDisplay.textContent = '';
+}
+
 function updateCounters(score) {
-    winDisplay.textContent = "WIN \r\n" + score.win;
-    lossDisplay.textContent = "LOSS \r\n" + score.loss;
-    drawDisplay.textContent = "DRAW \r\n" + score.draw;
+    winDisplay.textContent = "win " + score.win;
+    lossDisplay.textContent = "loss " + score.loss;
+    drawDisplay.textContent = "draw " + score.draw;
 }
 
 resetButton.addEventListener('click', () =>

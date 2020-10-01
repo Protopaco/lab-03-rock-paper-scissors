@@ -1,5 +1,6 @@
 *{
-
+    font-family: 'Work Sans', sans-serif;
+    
 }
 
 body{
@@ -8,6 +9,8 @@ body{
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
+    background-color:#BFC0C0;
+    color: white;
 }
 
 main{
@@ -16,7 +19,7 @@ main{
 
 column {
     display: grid;
-    grid-template-rows: 300px 100px 100px 175px 50px;
+    grid-template-rows: 50px 175px 100px 100px 175px 50px;
     justify-content: center;
     align-items: center;
 }
@@ -31,23 +34,21 @@ row {
 
 .score-module {
     width: 33%;
-   height: 200px;
+   height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 25%;
+    background-color: #4F5D75;
+    color: #BFC0C0;
 }
 
 .display-module {
     width: 700px;
+    color: #4F5D75;
 
 }
 
-.user-option{
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    opacity: .5;
-}
 
 img {
     transform: scale(.9);
@@ -58,19 +59,21 @@ input {
 }
 
 label:hover{
-    transform: scale(1.05);
 }
 
 button {
     width: 100%;
     margin: 0;
+    background-color: #4F5D75;
+    color: white;
+    border-radius: 10%;
+    outline: none;
 }
 
 input[type="radio"]:checked + span {
     animation-name: label-pull;
     animation-duration: 2s;
-    background-color: brown;
-    height: 100%;
+    height: 75%;
 
 }
 
@@ -81,29 +84,68 @@ input[type="radio"]:checked + span {
 }
 
 .user-options {
-    border: 1px solid black;
-    height: 75%;
+    background-color: #4F5D75;
+    padding: 20px;
+    height: 50%;
     width: 100%;
     display: flex;
     flex-direction: flex-start;
     justify-content: center;
     border-radius: 25% 25% 0 0;
+    color: white;
+
+}
+
+.user-options:hover{
+    height: 55%;
+
+}
+.computer-options {
+    background-color: #4F5D75;
+    padding: 20px;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: flex-start;
+    justify-content: center;
+    border-radius: 0 0 25% 25%;
     color: white
 }
 
 
+
+
 label {
     height: 200px;
-    border: 2px solid red;
     width: 200px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-end;
     margin: 0;
 }
 
+.top{
+    align-items: flex-start;
+}
+
+.bottom{
+    align-items: flex-end;
+}
+
+.play-card{
+    animation-name: label-pull;
+    animation-duration: 100ms;
+    height: 75%;
+}
+
+
 @keyframes label-pull {
-    from {height: 75%;}
-    to {height: 100%;}
+    from {height: 50%;}
+    to {height: 75%;}
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    color: #4F5D75;
 }
