@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { gamePlay, updateCounters, resetGame } from './game-play.js';
+import { gamePlay, resetGame } from './game-play.js';
 
 // grabbing HTML elements
 const resetButton = document.getElementById('reset');
