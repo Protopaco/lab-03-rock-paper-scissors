@@ -1,13 +1,13 @@
 
-export function didUserWin (player, computer){
+export function didUserWin(player, computer){
 
-    const rps = ["rock", "paper", "scissors"];
+    const rps = ['rock', 'paper', 'scissors'];
 
     if (player === computer) {
         return 'draw';
     }
 
-    if ((rps.indexOf(player) === (rps.indexOf(computer)+1) %3)) {
+    if ((rps.indexOf(player) === (rps.indexOf(computer) + 1) % 3)) {
         return 'win';
     }
     

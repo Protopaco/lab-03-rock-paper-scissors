@@ -5,18 +5,24 @@ const lossDisplay = document.getElementById('losses');
 const drawDisplay = document.getElementById('draws');
 
 
-
 export function toggleComputerCard(index){
     computerOptions[index].classList.toggle('play-card');
+
+    const chosenCard = document.querySelector(':checked');
+    const chosenBox = chosenCard.value;
+    const animateBox = document.getElementById(chosenBox);
+
+    animateBox.classList.toggle('play-card');
+
+    console.log(animateBox.classList);
 }
 
-export function gameEnd (result, score) {
-    console.log(result);
+export function gameEnd(result, score) {
 
-   if (result === 'win'){
-       resultDisplay.textContent = 'YOU WIN!';
-       score.win = score.win + 1;
-   } else if (result === 'lose') {      
+    if (result === 'win'){
+        resultDisplay.textContent = 'YOU WIN!';
+        score.win = score.win + 1;
+    } else if (result === 'lose') {      
         resultDisplay.textContent = 'YOU LOST!';
         score.loss = score.loss + 1;
     } else {
@@ -33,7 +39,7 @@ function resetResultDisplay(){
 
 
 export function updateCounters(score) {
-    winDisplay.textContent = "win " + score.win;
-    lossDisplay.textContent = "loss " + score.loss;
-    drawDisplay.textContent = "draw " + score.draw;
+    winDisplay.textContent = score.win;
+    lossDisplay.textContent = score.loss;
+    drawDisplay.textContent = score.draw;
 }
