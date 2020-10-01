@@ -6,47 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
-    <title>Document</title>
+    <title>Rock, Paper, Scissors</title>
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png"/>
-        </div>
-    </header>
     <main>
-        <section class="main-section">
-            <img class="main-logo" src="assets/alchemy-logo.png"/>
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
+        <column>
+            <row>
+                <h3> computer</h2>
+            </row>
+            <row>
+                <label class="top">
+                    <span class="computer-options"  id="cRock">rock</span>
+                </label>
+                <label class="top">
+                    <span class="computer-options" id="cPaper">paper</span>
+                </label>
+                <label class="top">
+                    <span class="computer-options" id="cScissors">scissors</span>
+                </label>
 
-            <content>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
-            </p>
+                <span id="computer-display">
+                    <img src='' id="computer-image">
+                </span>
+            </row>
+            <row class="display-module">
+                <span class="score-module" id="wins">wins</span>
+                <span class="score-module" id="losses">losses</span>
+                <span class="score-module" id="draws">draws</span>
+            </row>
+            <row class="display-module">
+                <span id="result-display"></span>
 
-        </section>
+            </row>
+            <row>
+                <label class="bottom">
+                    <input type='radio' name='user-choice' value='rock' checked>
+                    <span class="user-options">rock</span>
+                </label>
+                <label class="bottom">
+                    <input type='radio' name='user-choice' value='paper'>
+                    <span class="user-options">paper</span>
+                </label>
+                <label class="bottom">
+                    <input type='radio' name='user-choice' value='scissors'>
+                    <span class="user-options">scissors</span>
+                </label>
+            </row>
+            <row>
+                <button id="play-button">PLAY!</button>
+                <button id="reset">reset</button>
+            </row>
+    </column>
     </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
-    </footer>
 
     <script type="module" src="app.js"></script>
 </body>
