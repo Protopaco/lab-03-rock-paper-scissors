@@ -3,21 +3,16 @@ import { getRandomThrow } from './get-random-throw.js';
 import { didUserWin } from './check-results.js';
 
 // grabbing HTML elements
-const computerDisplay = document.getElementById('computer-display');
+const resetButton = document.getElementById('reset');
 const computerImage = document.getElementById('computer-image');
 const resultDisplay = document.getElementById('result-display');
 const winDisplay = document.getElementById('wins');
 const lossDisplay = document.getElementById('losses');
 const drawDisplay = document.getElementById('draws');
-// const infoDisplay = document.getElementById('info-display')
 const playButton = document.getElementById('play-button');
 // initialize state
-// establishing state
 
-const score = {win: 0, loss: 0, draw: 0}
-// let userWins = 0;
-// let userLoss = 0;
-// let userDraws = 0;
+const score = {win: 0, loss: 0, draw: 0, reset: 0}
 let computerThrow = '';
 let userThrow = '';
 
@@ -43,7 +38,6 @@ function displayComputerThrow(computerThrow){
 
 function gameEnd (result, score) {
     console.log(result);
-    // infoDisplay.textContent = `User: ${userThrow} vs Computer: ${computerThrow}!`
    if (result === 'win'){
        resultDisplay.textContent = 'YOU WIN!';
        score.win = score.win + 1;
@@ -55,13 +49,23 @@ function gameEnd (result, score) {
         score.draw++;
     }
     updateCounters(score);
-   
 }
-
-// function showMatchUp(userThrow, computerThrow) {}
 
 function updateCounters(score) {
     winDisplay.textContent = "WIN \r\n" + score.win;
     lossDisplay.textContent = "LOSS \r\n" + score.loss;
     drawDisplay.textContent = "DRAW \r\n" + score.draw;
+}
+
+resetButton.addEventListener('click', () =>
+{
+    resetGame(score)
+});
+
+function resetGame(score) {
+    console.log('in reset');
+    score.win = 0;
+    score.loss = 0;                              
+    score.draw = 0;
+    updateCounters(score);
 }
