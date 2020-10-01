@@ -17,7 +17,7 @@
     <main>
         <column>
             <row>
-                <h3> computer</h2>
+                <h3>computer</h3>
             </row>
             <row>
                 <label class="top">
@@ -29,15 +29,11 @@
                 <label class="top">
                     <span class="computer-options" id="cScissors">scissors</span>
                 </label>
-
-                <span id="computer-display">
-                    <img src='' id="computer-image">
-                </span>
             </row>
-            <row class="display-module">
-                <span class="score-module" id="wins">wins 0</span>
-                <span class="score-module" id="losses">losses 0</span>
-                <span class="score-module" id="draws">draws 0</span>
+            <row class="score-module">
+                <p>wins <span id="wins">0</span></p>
+                <p>losses <span id="losses">0</span></p>
+                <p>draws <span id="draws">0</span></p>
             </row>
             <row class="display-module">
                 <span id="result-display"></span>
@@ -46,15 +42,15 @@
             <row>
                 <label class="bottom">
                     <input type='radio' name='user-choice' value='rock' checked>
-                    <span class="user-options">rock</span>
+                    <span class="user-options" id="rock">rock</span>
                 </label>
                 <label class="bottom">
                     <input type='radio' name='user-choice' value='paper'>
-                    <span class="user-options">paper</span>
+                    <span class="user-options" id="paper">paper</span>
                 </label>
                 <label class="bottom">
                     <input type='radio' name='user-choice' value='scissors'>
-                    <span class="user-options">scissors</span>
+                    <span class="user-options" id="scissors">scissors</span>
                 </label>
             </row>
             <row>

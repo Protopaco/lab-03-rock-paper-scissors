@@ -1,6 +1,6 @@
 import { getRandomThrow } from './get-random-throw.js';
 import { didUserWin } from './check-results.js';
-import { toggleComputerCard, gameEnd, updateCounters } from './display-controls';
+import { toggleComputerCard, gameEnd, updateCounters } from './display-controls.js';
 
 
 export function gamePlay(score) {
