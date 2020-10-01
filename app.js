@@ -41,7 +41,7 @@ function gameEnd (result, score) {
    if (result === 'win'){
        resultDisplay.textContent = 'YOU WIN!';
        score.win = score.win + 1;
-   } else if (result === 'lose') {
+   } else if (result === 'lose') {      
         resultDisplay.textContent = 'YOU LOST!';
         score.loss = score.loss + 1;
     } else {
@@ -67,5 +67,7 @@ function resetGame(score) {
     score.win = 0;
     score.loss = 0;                              
     score.draw = 0;
+    score.reset++;
+    resetButton.textContent = `reset (${score.reset})`;
     updateCounters(score);
 }
