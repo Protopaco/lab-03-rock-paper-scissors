@@ -37,5 +37,5 @@ export function resetGame(score) {
     score.draw = 0;
     score.reset++;
     updateCounters(score);
-    return `reset (${score.reset})`;
+    return `reset #${score.reset}`;
 }

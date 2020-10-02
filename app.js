@@ -10,7 +10,12 @@ const score = { win: 0, loss: 0, draw: 0, reset: 0 };
 
 
 playButton.addEventListener('click', () =>{
+    playButton.disabled = true;
+    setTimeout(function() {
+        playButton.disabled = false;},1000);
+
     gamePlay(score);
+    
 });
 
 resetButton.addEventListener('click', () => {

@@ -1,4 +1,4 @@
-const computerOptions = document.getElementsByClassName('computer-options');
+const computerOptions = document.getElementsByClassName('computer');
 const resultDisplay = document.getElementById('result-display');
 const winDisplay = document.getElementById('wins');
 const lossDisplay = document.getElementById('losses');
@@ -13,8 +13,6 @@ export function toggleComputerCard(index){
     const animateBox = document.getElementById(chosenBox);
 
     animateBox.classList.toggle('play-card');
-
-    console.log(animateBox.classList);
 }
 
 export function gameEnd(result, score) {
